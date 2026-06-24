@@ -274,16 +274,19 @@ img{ max-width:100%; display:block; }
   background: linear-gradient(165deg, rgba(255,255,255,.74), rgba(255,255,255,.52));
   -webkit-backdrop-filter: blur(22px) saturate(1.5); backdrop-filter: blur(22px) saturate(1.5);
   border:1px solid rgba(255,255,255,.78); border-radius: var(--radius-lg);
-  padding:30px;
+  padding:20px 30px 40px 30px;
   box-shadow: 0 2px 10px -6px color-mix(in oklab, var(--accent) 14%, transparent), 0 34px 66px -40px color-mix(in oklab, var(--accent) 26%, transparent), inset 0 1px 0 rgba(255,255,255,.5);
   transition: transform var(--t), box-shadow var(--t);
 }
 .role:hover{ transform: translateY(-5px);
   box-shadow: 0 6px 22px -12px color-mix(in oklab, var(--accent) 14%, transparent), 0 52px 92px -50px color-mix(in oklab, var(--accent) 28%, transparent), inset 0 1px 0 rgba(255,255,255,.5); }
+.role__body{ display:flex; flex-direction:column; align-items:center; text-align:center; justify-content:center; height:100%; }
+.role__body .btn{ margin-top:52px; }
+
 .role__ic{ width:46px; height:46px; border-radius:13px; display:grid; place-items:center;
   background: var(--accent-soft); color: var(--accent); margin-bottom:14px; }
-.role__title{ font-size:1.32rem; font-weight:800; }
-.role__desc{ color: var(--ink-2); margin-top:8px; font-size:.97rem; }
+.role__title{ font-size:1.32rem; font-weight:800; height:3.8em; display:flex; align-items:flex-start; }
+.role__desc{ color: var(--ink-2); margin-top:10px; font-size:1.08rem; }
 .checks{ list-style:none; padding:0; margin:18px 0 22px; display:grid; gap:10px; }
 .checks li{ position:relative; padding-left:26px; font-size:.9rem; color: var(--ink-2); }
 .checks li::before{
@@ -364,7 +367,7 @@ img{ max-width:100%; display:block; }
 .caro__arrow:hover{ background: var(--accent); color:#fff; border-color: var(--accent); transform: translateY(-2px); }
 
 .caro{ margin-top:32px; overflow:hidden; padding:16px 0 46px; width:100%; }
-@keyframes marquee{ from{ transform: translateX(0); } to{ transform: translateX(-26.3%); } }
+@keyframes marquee{ from{ transform: translateX(0); } to{ transform: translateX(-25%); } }
 .caro__track{
   display:flex; gap: var(--gap);
   width: max-content;
@@ -533,14 +536,8 @@ img{ max-width:100%; display:block; }
           <span class="role__ic">
             <svg viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="6" width="13" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 10l5-3v10l-5-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
           </span>
-          <h3 class="role__title">Student Ambassador & UGC Creator</h3>
+          <h3 class="role__title">Student Ambassador | UGC</h3>
           <p class="role__desc">Create content that helps students learn smarter and inspires millions around the world.</p>
-          <ul class="checks">
-            <li>Create engaging short-form videos</li>
-            <li>Share study tips, app experiences, and educational content</li>
-            <li>Collaborate with the Sovi.AI team on campaigns and launches</li>
-            <li>Build your personal brand while helping students succeed</li>
-          </ul>
           <a href="https://mysovi.ai/apps/ugc/" target="_blank" rel="noopener" class="btn btn--primary">View Details
             <svg class="arr" viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -561,14 +558,8 @@ img{ max-width:100%; display:block; }
           <span class="role__ic">
             <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 3h9l4 4v14H6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
-          <h3 class="role__title">Student Impact Internship</h3>
+          <h3 class="role__title">Internship</h3>
           <p class="role__desc">Build products, programs, and experiences that help millions of students learn better.</p>
-          <ul class="checks">
-            <li>Work on real projects across product, marketing, operations, and analytics</li>
-            <li>Collaborate with a fast-growing AI startup</li>
-            <li>Gain hands-on experience solving real business challenges</li>
-            <li>Help shape the future of education with AI</li>
-          </ul>
           <a href="https://mysovi.ai/apps/career/" target="_blank" rel="noopener" class="btn btn--primary">View Details
             <svg class="arr" viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -602,17 +593,17 @@ img{ max-width:100%; display:block; }
         <!-- original set -->
         <figure class="quote">
           <div class="quote__top"><span class="ava" style="--h:285">SL</span><span class="qmark">"</span></div>
-          <blockquote>Working as a Student Ambassador | UGC let me turn my creativity into content that truly helps students. The team is super supportive and the impact is real.</blockquote>
+          <blockquote>I never expected to earn real income while still in school. Creating content for Sovi.AI turned my passion into a paycheck and the impact on students makes it even more rewarding.</blockquote>
           <figcaption><strong>Sophie L.</strong><span>Student Ambassador | UGC</span><span class="term">Summer 2025</span></figcaption>
         </figure>
         <figure class="quote">
           <div class="quote__top"><span class="ava" style="--h:255">DK</span><span class="qmark">"</span></div>
-          <blockquote>As a Intern, I improved my problem-solving skills and learned how to explain concepts clearly. It's rewarding to see students benefit from your work.</blockquote>
+          <blockquote>As an Intern, I improved my problem-solving skills and learned how to explain concepts clearly. It's rewarding to see students benefit from your work.</blockquote>
           <figcaption><strong>David K.</strong><span>Intern</span><span class="term">Spring 2025</span></figcaption>
         </figure>
         <figure class="quote">
           <div class="quote__top"><span class="ava" style="--h:315">MW</span><span class="qmark">"</span></div>
-          <blockquote>Sovi.AI gave me the chance to grow, contribute, and work with an amazing group of passionate people. It's more than just an internship — it's a mission.</blockquote>
+          <blockquote>Sovi.AI gave me the chance to grow, contribute, and work with an amazing group of passionate people. It's more than just an internship, it's a mission.</blockquote>
           <figcaption><strong>Megan W.</strong><span>Content Intern</span><span class="term">Summer 2025</span></figcaption>
         </figure>
         <figure class="quote">
@@ -621,25 +612,33 @@ img{ max-width:100%; display:block; }
           <figcaption><strong>Jason T.</strong><span>Product Intern</span><span class="term">Summer 2025</span></figcaption>
         </figure>
         <figure class="quote">
+          <div class="quote__top"><span class="ava" style="--h:160">CM</span><span class="qmark">"</span></div>
+          <blockquote>The Sovi.AI UGC program is the best side hustle I've found in college. I make content I actually enjoy, grow my following, and get paid for it, all while helping students study smarter.</blockquote>
+          <figcaption><strong>Chloe M.</strong><span>Student Ambassador | UGC</span><span class="term">Spring 2025</span></figcaption>
+        </figure>
+        <figure class="quote">
           <div class="quote__top"><span class="ava" style="--h:200">AR</span><span class="qmark">"</span></div>
           <blockquote>The mentorship here is unmatched. I shipped a feature in week three and watched students actually use it. That feeling is hard to beat.</blockquote>
           <figcaption><strong>Aisha R.</strong><span>Engineering Intern</span><span class="term">Fall 2025</span></figcaption>
         </figure>
         <!-- duplicate sets for seamless loop -->
-        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:285">SL</span><span class="qmark">"</span></div><blockquote>Working as a Student Ambassador | UGC let me turn my creativity into content that truly helps students. The team is super supportive and the impact is real.</blockquote><figcaption><strong>Sophie L.</strong><span>Student Ambassador | UGC</span><span class="term">Summer 2025</span></figcaption></figure>
-        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:255">DK</span><span class="qmark">"</span></div><blockquote>As a Intern, I improved my problem-solving skills and learned how to explain concepts clearly. It's rewarding to see students benefit from your work.</blockquote><figcaption><strong>David K.</strong><span>Intern</span><span class="term">Spring 2025</span></figcaption></figure>
-        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:315">MW</span><span class="qmark">"</span></div><blockquote>Sovi.AI gave me the chance to grow, contribute, and work with an amazing group of passionate people. It's more than just an internship — it's a mission.</blockquote><figcaption><strong>Megan W.</strong><span>Content Intern</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:285">SL</span><span class="qmark">"</span></div><blockquote>I never expected to earn real income while still in school. Creating content for Sovi.AI turned my passion into a paycheck and the impact on students makes it even more rewarding.</blockquote><figcaption><strong>Sophie L.</strong><span>Student Ambassador | UGC</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:255">DK</span><span class="qmark">"</span></div><blockquote>As an Intern, I improved my problem-solving skills and learned how to explain concepts clearly. It's rewarding to see students benefit from your work.</blockquote><figcaption><strong>David K.</strong><span>Intern</span><span class="term">Spring 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:315">MW</span><span class="qmark">"</span></div><blockquote>Sovi.AI gave me the chance to grow, contribute, and work with an amazing group of passionate people. It's more than just an internship, it's a mission.</blockquote><figcaption><strong>Megan W.</strong><span>Content Intern</span><span class="term">Summer 2025</span></figcaption></figure>
         <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:25">JT</span><span class="qmark">"</span></div><blockquote>I loved the fast-paced environment and the autonomy to own projects. Every day I felt challenged and inspired to do my best work.</blockquote><figcaption><strong>Jason T.</strong><span>Product Intern</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:160">CM</span><span class="qmark">"</span></div><blockquote>The Sovi.AI UGC program is the best side hustle I've found in college. I make content I actually enjoy, grow my following, and get paid for it, all while helping students study smarter.</blockquote><figcaption><strong>Chloe M.</strong><span>Student Ambassador | UGC</span><span class="term">Spring 2025</span></figcaption></figure>
         <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:200">AR</span><span class="qmark">"</span></div><blockquote>The mentorship here is unmatched. I shipped a feature in week three and watched students actually use it. That feeling is hard to beat.</blockquote><figcaption><strong>Aisha R.</strong><span>Engineering Intern</span><span class="term">Fall 2025</span></figcaption></figure>
-        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:285">SL</span><span class="qmark">"</span></div><blockquote>Working as a Student Ambassador | UGC let me turn my creativity into content that truly helps students. The team is super supportive and the impact is real.</blockquote><figcaption><strong>Sophie L.</strong><span>Student Ambassador | UGC</span><span class="term">Summer 2025</span></figcaption></figure>
-        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:255">DK</span><span class="qmark">"</span></div><blockquote>As a Intern, I improved my problem-solving skills and learned how to explain concepts clearly. It's rewarding to see students benefit from your work.</blockquote><figcaption><strong>David K.</strong><span>Intern</span><span class="term">Spring 2025</span></figcaption></figure>
-        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:315">MW</span><span class="qmark">"</span></div><blockquote>Sovi.AI gave me the chance to grow, contribute, and work with an amazing group of passionate people. It's more than just an internship — it's a mission.</blockquote><figcaption><strong>Megan W.</strong><span>Content Intern</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:285">SL</span><span class="qmark">"</span></div><blockquote>I never expected to earn real income while still in school. Creating content for Sovi.AI turned my passion into a paycheck and the impact on students makes it even more rewarding.</blockquote><figcaption><strong>Sophie L.</strong><span>Student Ambassador | UGC</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:255">DK</span><span class="qmark">"</span></div><blockquote>As an Intern, I improved my problem-solving skills and learned how to explain concepts clearly. It's rewarding to see students benefit from your work.</blockquote><figcaption><strong>David K.</strong><span>Intern</span><span class="term">Spring 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:315">MW</span><span class="qmark">"</span></div><blockquote>Sovi.AI gave me the chance to grow, contribute, and work with an amazing group of passionate people. It's more than just an internship, it's a mission.</blockquote><figcaption><strong>Megan W.</strong><span>Content Intern</span><span class="term">Summer 2025</span></figcaption></figure>
         <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:25">JT</span><span class="qmark">"</span></div><blockquote>I loved the fast-paced environment and the autonomy to own projects. Every day I felt challenged and inspired to do my best work.</blockquote><figcaption><strong>Jason T.</strong><span>Product Intern</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:160">CM</span><span class="qmark">"</span></div><blockquote>The Sovi.AI UGC program is the best side hustle I've found in college. I make content I actually enjoy, grow my following, and get paid for it, all while helping students study smarter.</blockquote><figcaption><strong>Chloe M.</strong><span>Student Ambassador | UGC</span><span class="term">Spring 2025</span></figcaption></figure>
         <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:200">AR</span><span class="qmark">"</span></div><blockquote>The mentorship here is unmatched. I shipped a feature in week three and watched students actually use it. That feeling is hard to beat.</blockquote><figcaption><strong>Aisha R.</strong><span>Engineering Intern</span><span class="term">Fall 2025</span></figcaption></figure>
-        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:285">SL</span><span class="qmark">"</span></div><blockquote>Working as a Student Ambassador | UGC let me turn my creativity into content that truly helps students. The team is super supportive and the impact is real.</blockquote><figcaption><strong>Sophie L.</strong><span>Student Ambassador | UGC</span><span class="term">Summer 2025</span></figcaption></figure>
-        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:255">DK</span><span class="qmark">"</span></div><blockquote>As a Intern, I improved my problem-solving skills and learned how to explain concepts clearly. It's rewarding to see students benefit from your work.</blockquote><figcaption><strong>David K.</strong><span>Intern</span><span class="term">Spring 2025</span></figcaption></figure>
-        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:315">MW</span><span class="qmark">"</span></div><blockquote>Sovi.AI gave me the chance to grow, contribute, and work with an amazing group of passionate people. It's more than just an internship — it's a mission.</blockquote><figcaption><strong>Megan W.</strong><span>Content Intern</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:285">SL</span><span class="qmark">"</span></div><blockquote>I never expected to earn real income while still in school. Creating content for Sovi.AI turned my passion into a paycheck and the impact on students makes it even more rewarding.</blockquote><figcaption><strong>Sophie L.</strong><span>Student Ambassador | UGC</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:255">DK</span><span class="qmark">"</span></div><blockquote>As an Intern, I improved my problem-solving skills and learned how to explain concepts clearly. It's rewarding to see students benefit from your work.</blockquote><figcaption><strong>David K.</strong><span>Intern</span><span class="term">Spring 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:315">MW</span><span class="qmark">"</span></div><blockquote>Sovi.AI gave me the chance to grow, contribute, and work with an amazing group of passionate people. It's more than just an internship, it's a mission.</blockquote><figcaption><strong>Megan W.</strong><span>Content Intern</span><span class="term">Summer 2025</span></figcaption></figure>
         <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:25">JT</span><span class="qmark">"</span></div><blockquote>I loved the fast-paced environment and the autonomy to own projects. Every day I felt challenged and inspired to do my best work.</blockquote><figcaption><strong>Jason T.</strong><span>Product Intern</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:160">CM</span><span class="qmark">"</span></div><blockquote>The Sovi.AI UGC program is the best side hustle I've found in college. I make content I actually enjoy, grow my following, and get paid for it, all while helping students study smarter.</blockquote><figcaption><strong>Chloe M.</strong><span>Student Ambassador | UGC</span><span class="term">Spring 2025</span></figcaption></figure>
         <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:200">AR</span><span class="qmark">"</span></div><blockquote>The mentorship here is unmatched. I shipped a feature in week three and watched students actually use it. That feeling is hard to beat.</blockquote><figcaption><strong>Aisha R.</strong><span>Engineering Intern</span><span class="term">Fall 2025</span></figcaption></figure>
       </div>
     </div>
