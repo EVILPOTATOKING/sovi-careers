@@ -90,6 +90,9 @@ img{ max-width:100%; display:block; }
   box-shadow: 0 10px 24px -12px color-mix(in oklab, var(--accent) 60%, transparent);
 }
 .btn--primary{ background: var(--accent); }
+.btn--dark{ background:#111; color:#fff; box-shadow:0 10px 24px -12px rgba(0,0,0,.3); }
+.hero__img-link{ display:block; }
+.hero__img-link:hover .hero__img{ transform:translateY(-8px) scale(1.02); box-shadow:0 36px 80px rgba(100,60,200,.26) !important; }
 .btn--primary:hover{ background: var(--accent-deep); transform: translateY(-2px);
   box-shadow: 0 16px 30px -12px color-mix(in oklab, var(--accent) 65%, transparent); }
 .btn--primary:active{ transform: translateY(0); }
@@ -305,14 +308,13 @@ img{ max-width:100%; display:block; }
 }
 .role:hover .phone{ transform: translateY(-7px) rotate(-1.4deg);
   box-shadow: 0 1px 2px rgba(0,0,0,.55), 0 50px 86px -30px color-mix(in oklab, var(--accent) 60%, rgba(9,7,15,.7)), inset 0 0 0 1.5px rgba(255,255,255,.08), inset 0 1.5px 1px rgba(255,255,255,.2); }
-.phone__notch{ position:absolute; top:15px; left:50%; transform:translateX(-50%); width:54px; height:16px; border-radius:999px; background:#05030a; z-index:6;
+.phone__notch{ position:absolute; top:10px; left:50%; transform:translateX(-50%); width:36px; height:11px; border-radius:999px; background:#05030a; z-index:6;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.06); }
 .phone__notch::after{ content:""; position:absolute; right:9px; top:50%; transform:translateY(-50%); width:6px; height:6px; border-radius:50%;
   background: radial-gradient(circle at 34% 34%, #4a4366, #0a0814); }
 
 .phone--video .ph-clip, .phone--hw .hw{ position:relative; width:100%; height:100%; border-radius:36px; overflow:hidden; }
-.phone--video .ph-clip::before, .phone--hw .hw::before{ content:""; position:absolute; inset:0; z-index:5; pointer-events:none; border-radius:inherit;
-  background: linear-gradient(133deg, rgba(255,255,255,.28), rgba(255,255,255,0) 30%, rgba(255,255,255,0) 74%, rgba(255,255,255,.12)); }
+.phone--video .ph-clip::before, .phone--hw .hw::before{ content:none; }
 
 /* UGC video phone */
 .phone--video .ph-clip{
@@ -362,11 +364,11 @@ img{ max-width:100%; display:block; }
 .caro__arrow:hover{ background: var(--accent); color:#fff; border-color: var(--accent); transform: translateY(-2px); }
 
 .caro{ margin-top:32px; overflow:hidden; padding:16px 0 46px; width:100%; }
-@keyframes marquee{ from{ transform: translateX(0); } to{ transform: translateX(-50%); } }
+@keyframes marquee{ from{ transform: translateX(0); } to{ transform: translateX(-26.3%); } }
 .caro__track{
   display:flex; gap: var(--gap);
   width: max-content;
-  animation: marquee 28s linear infinite;
+  animation: marquee 60s linear infinite;
 }
 .caro:hover .caro__track{ animation-play-state: paused; }
 .quote{
@@ -473,19 +475,9 @@ img{ max-width:100%; display:block; }
       <img src="Sovi-logo.png" alt="Sovi" width="34" height="34" style="border-radius:10px; display:block; flex-shrink:0;" />
       <span class="brand__name">Sovi<span class="brand__dot">.AI</span></span>
     </a>
-    <nav class="nav__links" aria-label="Primary">
-      <a href="#top">Home</a>
-      <a href="#positions">Ask Sovi</a>
-      <a href="#positions">AI Study
-        <svg class="navchev" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="#positions">AP Test Prep</a>
-      <a href="#voices">Resources
-        <svg class="navchev" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="#top" class="is-active" data-nav>Career</a>
-    </nav>
+    <nav class="nav__links" aria-label="Primary"></nav>
     <div class="nav__right">
+      <a href="https://mysovi.ai" target="_blank" rel="noopener" style="font-weight:600;font-size:.95rem;color:var(--ink);text-decoration:none;padding:6px 0;">About Us</a>
       <a href="#positions" class="btn btn--primary btn--sm js-scroll">Apply Now</a>
       <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -506,66 +498,23 @@ img{ max-width:100%; display:block; }
 <section class="hero" data-screen-label="Hero">
   <div class="hero__inner wrap">
     <div class="hero__copy">
-      <span class="eyebrow">Careers at Sovi.AI</span>
-      <h1 class="hero__title">Build the Future<br />of <span class="accent">Learning</span></h1>
-      <p class="hero__sub">Join our mission to empower students worldwide with AI. Explore internship opportunities and make a real impact.</p>
+      <span class="eyebrow">Now Hiring 2026 Interns</span>
+      <h1 class="hero__title">Shape the Future of Learning <span class="accent">with Sovi.AI</span></h1>
+      <p class="hero__sub">Experience Sovi.AI, the next-gen AI study companion designed for student leaders driving the future of learning. Download our app now to access comprehensive study tools and get inspired for your application!</p>
       <div class="hero__cta">
-        <button class="btn btn--primary btn--lg" id="whyToggle" aria-expanded="false">
-          <span>Why Intern at Sovi.AI?</span>
-          <svg class="chev" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <a href="#positions" class="btn btn--ghost btn--lg js-scroll">See open roles</a>
-      </div>
-      <div class="why" id="whyPanel" hidden>
-        <div class="why__item"><span class="why__dot"></span><div><strong>Real ownership.</strong> Ship features used by millions of students.</div></div>
-        <div class="why__item"><span class="why__dot"></span><div><strong>Mentorship.</strong> Learn directly from product, design, and ML leads.</div></div>
-        <div class="why__item"><span class="why__dot"></span><div><strong>Mission that matters.</strong> Make great education accessible to everyone.</div></div>
+        <a href="https://apps.apple.com/us/app/sovi-ai-ai-study-companion/id6740720452?ct=handshakewebsite&pt=128083157" target="_blank" rel="noopener" class="btn btn--dark btn--lg">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <div style="display:flex;flex-direction:column;line-height:1.2;">
+            <span style="font-size:.65rem;opacity:.8;font-weight:400;">Download on the</span>
+            <span style="font-size:.95rem;font-weight:700;">App Store</span>
+          </div>
+        </a>
       </div>
     </div>
-
-    <!-- App mock -->
     <div class="hero__art">
-      <div class="floaty floaty--bot" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="22" height="22"><rect x="4" y="7" width="16" height="12" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="9" cy="13" r="1.4" fill="currentColor"/><circle cx="15" cy="13" r="1.4" fill="currentColor"/><path d="M12 7V4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="3" r="1.4" fill="currentColor"/></svg>
-      </div>
-      <div class="floaty floaty--cap" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 5l9 4-9 4-9-4 9-4z" fill="currentColor"/><path d="M6 11v4c0 1.3 2.7 2.5 6 2.5s6-1.2 6-2.5v-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-      </div>
-      <div class="floaty floaty--bar" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="22" height="22"><rect x="5" y="12" width="3.4" height="7" rx="1" fill="currentColor"/><rect x="10.3" y="8" width="3.4" height="11" rx="1" fill="currentColor"/><rect x="15.6" y="5" width="3.4" height="14" rx="1" fill="currentColor"/></svg>
-      </div>
-
-      <div class="appwin">
-        <aside class="appwin__side">
-          <div class="appwin__logo"><span class="brand__mark brand__mark--sm">S</span></div>
-          <span class="sb"></span><span class="sb"></span><span class="sb sb--on"></span>
-          <span class="sb"></span><span class="sb"></span><span class="sb"></span>
-          <span class="sb"></span>
-        </aside>
-        <div class="appwin__main">
-          <div class="appwin__bar"><span class="appwin__search"></span></div>
-          <div class="appwin__hi">Hi Alex 👋</div>
-          <div class="appwin__q">What do you want to learn today?</div>
-          <div class="appwin__cols">
-            <div class="appwin__tiles">
-              <div class="tile"><span class="tile__ic">📘</span><span class="tile__t">AI Study</span><span class="tile__s">Personalized</span></div>
-              <div class="tile"><span class="tile__ic">💬</span><span class="tile__t">Ask Sovi</span><span class="tile__s">Instant help</span></div>
-              <div class="tile"><span class="tile__ic">📝</span><span class="tile__t">Practice</span><span class="tile__s">Mock tests</span></div>
-              <div class="tile"><span class="tile__ic">🎙️</span><span class="tile__t">Recording</span><span class="tile__s">Live notes</span></div>
-            </div>
-            <div class="panel">
-              <div class="panel__h">AI Study Companion</div>
-              <div class="panel__row"><span>Calculus</span><span class="bar"><i style="width:86%"></i></span></div>
-              <div class="panel__row"><span>Physics</span><span class="bar"><i style="width:64%"></i></span></div>
-              <div class="panel__row"><span>Statistics</span><span class="bar"><i style="width:48%"></i></span></div>
-              <div class="panel__ring">
-                <div class="ring" style="--p:80"><span>80%</span></div>
-                <span class="panel__keep">Keep it up!</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <a href="https://apps.apple.com/us/app/sovi-ai-ai-study-companion/id6740720452" target="_blank" rel="noopener" class="hero__img-link">
+        <img src="hero2.png" alt="Sovi.AI on App Store" style="width:100%;border-radius:18px;box-shadow:0 24px 64px rgba(100,60,200,.18);transition:transform .3s ease,box-shadow .3s ease;" class="hero__img" />
+      </a>
     </div>
   </div>
 </section>
@@ -574,7 +523,7 @@ img{ max-width:100%; display:block; }
 <section class="section" id="positions" data-screen-label="Positions">
   <div class="wrap">
     <span class="eyebrow">Open Positions</span>
-    <h2 class="section__title">Explore Our Internship Opportunities</h2>
+    <h2 class="section__title">Explore Our Job Opportunities</h2>
     <p class="section__sub">Choose the role that matches your passion and skills.</p>
 
     <div class="roles" id="roles">
@@ -584,12 +533,13 @@ img{ max-width:100%; display:block; }
           <span class="role__ic">
             <svg viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="6" width="13" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 10l5-3v10l-5-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
           </span>
-          <h3 class="role__title">UGC Creator Intern</h3>
-          <p class="role__desc">Create engaging short-form videos that educate, inspire, and connect with students.</p>
+          <h3 class="role__title">Student Ambassador & UGC Creator</h3>
+          <p class="role__desc">Create content that helps students learn smarter and inspires millions around the world.</p>
           <ul class="checks">
-            <li>Plan, shoot and edit short-form videos</li>
-            <li>Collaborate with marketing and product teams</li>
-            <li>Share your creativity with millions of students</li>
+            <li>Create engaging short-form videos</li>
+            <li>Share study tips, app experiences, and educational content</li>
+            <li>Collaborate with the Sovi.AI team on campaigns and launches</li>
+            <li>Build your personal brand while helping students succeed</li>
           </ul>
           <a href="https://mysovi.ai/apps/ugc/" target="_blank" rel="noopener" class="btn btn--primary">View Details
             <svg class="arr" viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -599,14 +549,8 @@ img{ max-width:100%; display:block; }
           <div class="phone phone--video">
             <div class="phone__notch"></div>
             <div class="ph-clip">
-              <span class="ph-clip__label"><span class="ph-dot"></span>creator&nbsp;clip</span>
-              <span class="ph-tiktok">♪</span>
-              <button class="ph-play" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
-              </button>
-              <div class="ph-cap">Making Math<br/>Make Sense ✨</div>
+              <img src="ugc.png" alt="UGC Creator" style="width:100%;height:100%;object-fit:cover;border-radius:36px;display:block;" />
             </div>
-            <span class="ph-tag">Short Video</span>
           </div>
         </div>
       </article>
@@ -617,12 +561,13 @@ img{ max-width:100%; display:block; }
           <span class="role__ic">
             <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 3h9l4 4v14H6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
-          <h3 class="role__title">Intern</h3>
-          <p class="role__desc">Help students learn better by creating accurate and easy-to-understand solutions.</p>
+          <h3 class="role__title">Student Impact Internship</h3>
+          <p class="role__desc">Build products, programs, and experiences that help millions of students learn better.</p>
           <ul class="checks">
-            <li>Solve and explain homework problems</li>
-            <li>Ensure accuracy and clarity of solutions</li>
-            <li>Support millions of learners every day</li>
+            <li>Work on real projects across product, marketing, operations, and analytics</li>
+            <li>Collaborate with a fast-growing AI startup</li>
+            <li>Gain hands-on experience solving real business challenges</li>
+            <li>Help shape the future of education with AI</li>
           </ul>
           <a href="https://mysovi.ai/apps/career/" target="_blank" rel="noopener" class="btn btn--primary">View Details
             <svg class="arr" viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -631,30 +576,9 @@ img{ max-width:100%; display:block; }
         <div class="role__art">
           <div class="phone phone--hw">
             <div class="phone__notch"></div>
-            <div class="hw">
-              <span class="hw__chip">Question</span>
-              <div class="hw__q">Solve for x: <em>2x + 3 = 11</em></div>
-              <span class="hw__chip hw__chip--sol">Solution</span>
-              <div class="hw__steps">
-                <div>2x + 3 = 11</div>
-                <div>2x = 8</div>
-                <div>x = <strong>4</strong></div>
-              </div>
-              <div class="hw__chart">
-                <svg viewBox="0 0 160 58" preserveAspectRatio="none" aria-hidden="true">
-                  <defs>
-                    <linearGradient id="hwfill" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0" stop-color="currentColor" stop-opacity=".26"/>
-                      <stop offset="1" stop-color="currentColor" stop-opacity="0"/>
-                    </linearGradient>
-                  </defs>
-                  <path d="M0 46 L32 38 L64 42 L96 22 L128 27 L160 7 L160 58 L0 58 Z" fill="url(#hwfill)"/>
-                  <path d="M0 46 L32 38 L64 42 L96 22 L128 27 L160 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="160" cy="7" r="3.4" fill="currentColor"/>
-                </svg>
-              </div>
+            <div class="hw" style="padding:0;background:none;">
+              <img src="intern.png" alt="Student Impact Intern" style="width:100%;height:100%;object-fit:cover;border-radius:36px;display:block;" />
             </div>
-            <span class="ph-tag ph-tag--right">Step-by-step Solutions</span>
           </div>
         </div>
       </article>
@@ -668,7 +592,7 @@ img{ max-width:100%; display:block; }
     <div class="voices__head">
       <div>
         <span class="eyebrow">Intern Voices</span>
-        <h2 class="section__title">Hear From Our Interns</h2>
+        <h2 class="section__title">Hear From Our Inside Voice</h2>
         <p class="section__sub">Real stories from real people making an impact.</p>
       </div>
     </div>
@@ -678,8 +602,8 @@ img{ max-width:100%; display:block; }
         <!-- original set -->
         <figure class="quote">
           <div class="quote__top"><span class="ava" style="--h:285">SL</span><span class="qmark">"</span></div>
-          <blockquote>Working as a UGC Creator Intern let me turn my creativity into content that truly helps students. The team is super supportive and the impact is real.</blockquote>
-          <figcaption><strong>Sophie L.</strong><span>UGC Creator Intern</span><span class="term">Summer 2025</span></figcaption>
+          <blockquote>Working as a Student Ambassador | UGC let me turn my creativity into content that truly helps students. The team is super supportive and the impact is real.</blockquote>
+          <figcaption><strong>Sophie L.</strong><span>Student Ambassador | UGC</span><span class="term">Summer 2025</span></figcaption>
         </figure>
         <figure class="quote">
           <div class="quote__top"><span class="ava" style="--h:255">DK</span><span class="qmark">"</span></div>
@@ -701,32 +625,22 @@ img{ max-width:100%; display:block; }
           <blockquote>The mentorship here is unmatched. I shipped a feature in week three and watched students actually use it. That feeling is hard to beat.</blockquote>
           <figcaption><strong>Aisha R.</strong><span>Engineering Intern</span><span class="term">Fall 2025</span></figcaption>
         </figure>
-        <!-- duplicate set for seamless loop -->
-        <figure class="quote" aria-hidden="true">
-          <div class="quote__top"><span class="ava" style="--h:285">SL</span><span class="qmark">"</span></div>
-          <blockquote>Working as a UGC Creator Intern let me turn my creativity into content that truly helps students. The team is super supportive and the impact is real.</blockquote>
-          <figcaption><strong>Sophie L.</strong><span>UGC Creator Intern</span><span class="term">Summer 2025</span></figcaption>
-        </figure>
-        <figure class="quote" aria-hidden="true">
-          <div class="quote__top"><span class="ava" style="--h:255">DK</span><span class="qmark">"</span></div>
-          <blockquote>As a Intern, I improved my problem-solving skills and learned how to explain concepts clearly. It's rewarding to see students benefit from your work.</blockquote>
-          <figcaption><strong>David K.</strong><span>Intern</span><span class="term">Spring 2025</span></figcaption>
-        </figure>
-        <figure class="quote" aria-hidden="true">
-          <div class="quote__top"><span class="ava" style="--h:315">MW</span><span class="qmark">"</span></div>
-          <blockquote>Sovi.AI gave me the chance to grow, contribute, and work with an amazing group of passionate people. It's more than just an internship — it's a mission.</blockquote>
-          <figcaption><strong>Megan W.</strong><span>Content Intern</span><span class="term">Summer 2025</span></figcaption>
-        </figure>
-        <figure class="quote" aria-hidden="true">
-          <div class="quote__top"><span class="ava" style="--h:25">JT</span><span class="qmark">"</span></div>
-          <blockquote>I loved the fast-paced environment and the autonomy to own projects. Every day I felt challenged and inspired to do my best work.</blockquote>
-          <figcaption><strong>Jason T.</strong><span>Product Intern</span><span class="term">Summer 2025</span></figcaption>
-        </figure>
-        <figure class="quote" aria-hidden="true">
-          <div class="quote__top"><span class="ava" style="--h:200">AR</span><span class="qmark">"</span></div>
-          <blockquote>The mentorship here is unmatched. I shipped a feature in week three and watched students actually use it. That feeling is hard to beat.</blockquote>
-          <figcaption><strong>Aisha R.</strong><span>Engineering Intern</span><span class="term">Fall 2025</span></figcaption>
-        </figure>
+        <!-- duplicate sets for seamless loop -->
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:285">SL</span><span class="qmark">"</span></div><blockquote>Working as a Student Ambassador | UGC let me turn my creativity into content that truly helps students. The team is super supportive and the impact is real.</blockquote><figcaption><strong>Sophie L.</strong><span>Student Ambassador | UGC</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:255">DK</span><span class="qmark">"</span></div><blockquote>As a Intern, I improved my problem-solving skills and learned how to explain concepts clearly. It's rewarding to see students benefit from your work.</blockquote><figcaption><strong>David K.</strong><span>Intern</span><span class="term">Spring 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:315">MW</span><span class="qmark">"</span></div><blockquote>Sovi.AI gave me the chance to grow, contribute, and work with an amazing group of passionate people. It's more than just an internship — it's a mission.</blockquote><figcaption><strong>Megan W.</strong><span>Content Intern</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:25">JT</span><span class="qmark">"</span></div><blockquote>I loved the fast-paced environment and the autonomy to own projects. Every day I felt challenged and inspired to do my best work.</blockquote><figcaption><strong>Jason T.</strong><span>Product Intern</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:200">AR</span><span class="qmark">"</span></div><blockquote>The mentorship here is unmatched. I shipped a feature in week three and watched students actually use it. That feeling is hard to beat.</blockquote><figcaption><strong>Aisha R.</strong><span>Engineering Intern</span><span class="term">Fall 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:285">SL</span><span class="qmark">"</span></div><blockquote>Working as a Student Ambassador | UGC let me turn my creativity into content that truly helps students. The team is super supportive and the impact is real.</blockquote><figcaption><strong>Sophie L.</strong><span>Student Ambassador | UGC</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:255">DK</span><span class="qmark">"</span></div><blockquote>As a Intern, I improved my problem-solving skills and learned how to explain concepts clearly. It's rewarding to see students benefit from your work.</blockquote><figcaption><strong>David K.</strong><span>Intern</span><span class="term">Spring 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:315">MW</span><span class="qmark">"</span></div><blockquote>Sovi.AI gave me the chance to grow, contribute, and work with an amazing group of passionate people. It's more than just an internship — it's a mission.</blockquote><figcaption><strong>Megan W.</strong><span>Content Intern</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:25">JT</span><span class="qmark">"</span></div><blockquote>I loved the fast-paced environment and the autonomy to own projects. Every day I felt challenged and inspired to do my best work.</blockquote><figcaption><strong>Jason T.</strong><span>Product Intern</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:200">AR</span><span class="qmark">"</span></div><blockquote>The mentorship here is unmatched. I shipped a feature in week three and watched students actually use it. That feeling is hard to beat.</blockquote><figcaption><strong>Aisha R.</strong><span>Engineering Intern</span><span class="term">Fall 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:285">SL</span><span class="qmark">"</span></div><blockquote>Working as a Student Ambassador | UGC let me turn my creativity into content that truly helps students. The team is super supportive and the impact is real.</blockquote><figcaption><strong>Sophie L.</strong><span>Student Ambassador | UGC</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:255">DK</span><span class="qmark">"</span></div><blockquote>As a Intern, I improved my problem-solving skills and learned how to explain concepts clearly. It's rewarding to see students benefit from your work.</blockquote><figcaption><strong>David K.</strong><span>Intern</span><span class="term">Spring 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:315">MW</span><span class="qmark">"</span></div><blockquote>Sovi.AI gave me the chance to grow, contribute, and work with an amazing group of passionate people. It's more than just an internship — it's a mission.</blockquote><figcaption><strong>Megan W.</strong><span>Content Intern</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:25">JT</span><span class="qmark">"</span></div><blockquote>I loved the fast-paced environment and the autonomy to own projects. Every day I felt challenged and inspired to do my best work.</blockquote><figcaption><strong>Jason T.</strong><span>Product Intern</span><span class="term">Summer 2025</span></figcaption></figure>
+        <figure class="quote" aria-hidden="true"><div class="quote__top"><span class="ava" style="--h:200">AR</span><span class="qmark">"</span></div><blockquote>The mentorship here is unmatched. I shipped a feature in week three and watched students actually use it. That feeling is hard to beat.</blockquote><figcaption><strong>Aisha R.</strong><span>Engineering Intern</span><span class="term">Fall 2025</span></figcaption></figure>
       </div>
     </div>
   </div>
@@ -754,7 +668,7 @@ img{ max-width:100%; display:block; }
           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.52V6.76a4.85 4.85 0 01-1.02-.07z"/></svg>
         </a>
         <a href="https://www.reddit.com/r/Sovi_ai/" target="_blank" rel="noopener" aria-label="Reddit" class="foot__social">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22 11.816c0-1.256-1.021-2.277-2.277-2.277-.593 0-1.122.24-1.526.613-1.496-.977-3.507-1.605-5.712-1.674l1.073-3.34 3.188.75c.046.779.686 1.397 1.47 1.397.813 0 1.47-.657 1.47-1.47s-.657-1.47-1.47-1.47c-.576 0-1.073.331-1.324.812l-3.565-.839a.27.27 0 0 0-.322.187l-1.195 3.724c-2.25.037-4.3.672-5.821 1.658a2.277 2.277 0 0 0-1.5-.564A2.277 2.277 0 0 0 2 11.816c0 .93.56 1.726 1.36 2.086a4.6 4.6 0 0 0-.048.655C3.312 17.246 7.228 20 12 20s8.688-2.754 8.688-5.443a4.6 4.6 0 0 0-.048-.655A2.271 2.271 0 0 0 22 11.816zM8.17 13.087c0-.657.534-1.19 1.19-1.19.658 0 1.192.533 1.192 1.19s-.534 1.19-1.191 1.19a1.19 1.19 0 0 1-1.19-1.19zm6.653 3.44c-.709.709-2.099.757-2.823.757-.724 0-2.114-.048-2.823-.757a.271.271 0 0 1 .383-.383c.448.448 1.408.607 2.44.607 1.033 0 1.993-.159 2.44-.607a.271.271 0 1 1 .383.383zm-.235-2.25a1.19 1.19 0 0 1-1.19-1.19c0-.657.533-1.19 1.19-1.19.657 0 1.19.533 1.19 1.19s-.533 1.19-1.19 1.19z"/></svg>
         </a>
         <a href="https://www.instagram.com/sovi_ai_official/" target="_blank" rel="noopener" aria-label="Instagram" class="foot__social">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
